@@ -7,10 +7,10 @@ layout: workshop      # DON'T CHANGE THIS.
 address: "https://indico.cern.ch/event/933434/"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+latitude: "40"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-88"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "Aug 24-28, 2020"
-humantime: "8:00 am - 4:00 pm"
+humantime: "10:00 am - 5:00 pm"
 startdate: 2020-08-24
 enddate: 2020-08-28
 instructor: [
