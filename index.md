@@ -373,8 +373,8 @@ please preview your site before committing, and make sure to run
 {% include dc/syllabus.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/syllabus.html %}
-{% elsif site.carpentry == "lc" %}
-{% include swc/syllabus.html %}
+{% elsif site.carpentry == "atlas" %}
+{% include atlas/syllabus.html %}
 {% endif %}
 
 <hr/>
