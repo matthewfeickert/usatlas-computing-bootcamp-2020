@@ -197,7 +197,16 @@ Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <em>
+    <strong>
+      <font color="red">
+        It is highly recommended that you DO NOT choose to use Windows.
+        If you currently have a Windows machine, it is recommended to either have <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux (WSL) installed</a> or to dual boot Ubuntu.
+      </font>
+    </strong>
+  </em>
 </p>
 
 {% comment %}
