@@ -233,9 +233,9 @@ special instructions.
   get in touch (using contact details below) and we will
   attempt to provide them.
 {% else %}
-  We are dedicated to providing a positive and accessible learning environment for all. Please
-  notify the instructors in advance of the workshop if you require any accommodations or if there is
-  anything we can do to make this workshop more accessible to you.
+  We are dedicated to providing a positive and accessible learning environment for all.
+  Captions will be provided for the full bootcamp by <a href="https://whitecoatcaptioning.com/">White Coat Captioning</a>.
+  Please notify the instructors in advance of the bootcamp if you require any accommodations or if there is anything we can do to make this bootcamp more accessible to you.
 </p>
 {% endif %}
 
@@ -267,7 +267,7 @@ Display the contact email address set in the configuration file.
 <p id="roles">
   <strong>Roles:</strong>
   To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
+  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">The Carpentries Workshop FAQ</a>.
 </p>
 
 <hr/>
