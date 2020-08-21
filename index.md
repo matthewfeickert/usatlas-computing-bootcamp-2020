@@ -208,7 +208,7 @@ Modify the block below if there are any special requirements.
   <em>
     <strong>
       <font color="red">
-        If you currently have a Windows machine, it is recommended to either have <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux (WSL) installed</a> or to dual boot Ubuntu.
+        If you currently have a Windows machine, it is recommended to either have <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux (WSL 2) installed</a> or to dual boot Ubuntu.
         There are some known issues with working with Windows and it will be easier if you avoid it.
       </font>
     </strong>
