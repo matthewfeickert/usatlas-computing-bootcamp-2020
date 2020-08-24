@@ -270,11 +270,13 @@ Display the contact email address set in the configuration file.
   for more information.
 </p>
 
+{% comment%}
 <p id="roles">
   <strong>Roles:</strong>
   To learn more about the roles at the workshop (who will be doing what),
   refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">The Carpentries Workshop FAQ</a>.
 </p>
+{% endcomment %}
 
 <hr/>
 
@@ -288,7 +290,7 @@ Everyone who participates in Carpentries activities is required to conform to th
 </p>
 
 <p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
+  <a href="mailto:atlas-us-computing-bootcamp-2020-organisation@cern.ch?subject=US-ATLAS Computing Bootcamp Code of Conduct Violation">
     <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
   </a>
 </p>
