@@ -10,7 +10,7 @@ language: "en"     # lowercase two-letter ISO language code such as "fr" (see ht
 latitude: "40"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "-88"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "Aug 24-28, 2020"
-humantime: "10:00 am - 5:00 pm"
+humantime: "10:00 am - 5:00 pm (UTC-6)"
 startdate: 2020-08-24
 enddate: 2020-08-28
 instructor: [
