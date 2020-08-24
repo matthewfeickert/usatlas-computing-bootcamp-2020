@@ -3,19 +3,37 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "FIXME"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["instructor one", "instructor two"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["first@example.org","second@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+#venue: "Online"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "https://indico.cern.ch/event/933434/"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
+latitude: "40"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-88"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "Aug 24-28, 2020"
+humantime: "10:00 am - 5:00 pm (UTC-6)"
+startdate: 2020-08-24
+enddate: 2020-08-28
+instructor: [
+"Matthew Feickert",
+"Giordon Stark",
+"Elizabeth Wickes",
+"Karol Krizka",
+"Justin Chiu",
+"Luke Polson",
+"Amber Roepe",
+"Henry Schreiner",
+"Danika MacDonell",
+"Bingxuan Liu",
+"Alex Schuy",
+"Robin Newhouse"
+]
+helper: [
+"Mark Neubauer",
+"Zach Marshall",
+"Nils Krumnack",
+"Adam Parker"
+]
+email: ["atlas-us-computing-bootcamp-2020-organisation@cern.ch"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
@@ -38,6 +56,7 @@ For a workshop please delete the following block until the next dashed-line
 {% endcomment %}
 
 
+{% comment %}
 <div class="alert alert-danger">
 This is the workshop template. Delete these lines and use it to
 <a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
@@ -47,6 +66,7 @@ in a workshop request yet, please also fill in
 to let us know about your workshop and our administrator may contact you if we
 need any extra information.
 </div>
+{% endcomment %}
 
 {% comment %}
 8< ============================= until here ==================
@@ -68,14 +88,6 @@ It looks like you are setting up a website for a Data Carpentry curriculum but y
 {% comment %}
 Check SWC curriculum
 {% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
 
 {% comment %}
 EVENTBRITE
@@ -112,6 +124,8 @@ the pitch.
 {% include dc/intro.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
+{% elsif site.carpentry == "atlas" %}
+{% include atlas/intro.html %}
 {% endif %}
 
 {% comment %}
@@ -126,6 +140,8 @@ workshop is only open to people from a particular institution.
 {% include dc/who.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/who.html %}
+{% elsif site.carpentry == "atlas" %}
+{% include atlas/who.html %}
 {% endif %}
 
 {% comment %}
@@ -187,7 +203,16 @@ Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <em>
+    <strong>
+      <font color="red">
+        If you currently have a Windows machine, it is recommended to either have <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux (WSL 2) installed</a> or to dual boot Ubuntu.
+        There are some known issues with working with Windows and it will be easier if you avoid it.
+      </font>
+    </strong>
+  </em>
 </p>
 
 {% comment %}
@@ -214,9 +239,9 @@ special instructions.
   get in touch (using contact details below) and we will
   attempt to provide them.
 {% else %}
-  We are dedicated to providing a positive and accessible learning environment for all. Please
-  notify the instructors in advance of the workshop if you require any accommodations or if there is
-  anything we can do to make this workshop more accessible to you.
+  We are dedicated to providing a positive and accessible learning environment for all.
+  Captions will be provided for the full bootcamp by <a href="https://whitecoatcaptioning.com/">White Coat Captioning</a>.
+  Please notify the instructors in advance of the bootcamp if you require any accommodations or if there is anything we can do to make this bootcamp more accessible to you.
 </p>
 {% endif %}
 
@@ -245,11 +270,13 @@ Display the contact email address set in the configuration file.
   for more information.
 </p>
 
+{% comment%}
 <p id="roles">
   <strong>Roles:</strong>
   To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
+  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">The Carpentries Workshop FAQ</a>.
 </p>
+{% endcomment %}
 
 <hr/>
 
@@ -259,11 +286,11 @@ CODE OF CONDUCT
 <h2 id="code-of-conduct">Code of Conduct</h2>
 
 <p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
+Everyone who participates in activities related to the Bootcamp is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>.
 </p>
 
 <p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
+  <a href="mailto:atlas-us-computing-bootcamp-2020-organisation@cern.ch?subject=US-ATLAS Computing Bootcamp Code of Conduct Violation">
     <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
   </a>
 </p>
@@ -296,13 +323,14 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
+{% comment %}
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 
 <hr/>
-
+{% endcomment %}
 
 {% comment %}
 SCHEDULE
@@ -319,6 +347,8 @@ to match your plans.  You may also want to change 'Day 1' and 'Day
 {% include dc/schedule.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/schedule.html %}
+{% elsif site.carpentry == "atlas" %}
+{% include atlas/schedule.html %}
 {% endif %}
 
 <hr/>
@@ -348,6 +378,8 @@ please preview your site before committing, and make sure to run
 {% include dc/syllabus.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/syllabus.html %}
+{% elsif site.carpentry == "atlas" %}
+{% include atlas/syllabus.html %}
 {% endif %}
 
 <hr/>
@@ -374,6 +406,8 @@ please preview your site before committing, and make sure to run
   Data Carpentry
   {% elsif site.carpentry == "lc" %}
   Library Carpentry
+  {% elsif site.carpentry == "atlas" %}
+  ATLAS
   {% endif %}
   workshop,
   you will need access to the software described below.
@@ -393,7 +427,7 @@ For online workshops, the section below provides:
 
 If you do not use Zoom for your online workshop, edit the file
 `_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instrucctions.
+to include the relevant installation instructions.
 {% endcomment %}
 {% if online != "false" %}
 {% include install_instructions/videoconferencing.html %}
@@ -410,4 +444,6 @@ during the workshop.
 {% include dc/setup.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/setup.html %}
+{% elsif site.carpentry == "atlas" %}
+{% include atlas/setup.html %}
 {% endif %}
